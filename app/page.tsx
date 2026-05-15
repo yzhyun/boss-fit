@@ -20,15 +20,6 @@ export default function Home() {
           </div>
 
           <div className="space-y-1">
-            <p className="text-[11px] font-bold tracking-[0.16em] text-stone-600">
-              TEAM RELATION CHECKER
-            </p>
-            <p className="text-[11px] font-bold tracking-[0.16em] text-stone-600">
-              INTERNAL OFFICE TEST
-            </p>
-            <p className="text-[11px] font-bold tracking-[0.16em] text-stone-600">
-              회사생활 적응 진단툴
-            </p>
             <h1 className="pt-2 text-[30px] leading-9 font-black tracking-[-0.04em] text-stone-900">
               팀장님...
               <br />
