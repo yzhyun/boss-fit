@@ -1,6 +1,15 @@
 import { StartForm } from "@/app/_components/start-form";
 
 export default function Home() {
+  const buildTimestamp = new Intl.DateTimeFormat("ko-KR", {
+    dateStyle: "short",
+    timeStyle: "medium",
+    timeZone: "Asia/Seoul",
+  }).format(new Date());
+
+  const deploymentCode = process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7) ?? "local";
+  const deploymentEnv = process.env.VERCEL_ENV ?? "local";
+
   return (
     <main className="min-h-screen bg-[#d8dde6] px-3 py-4 text-stone-900 sm:px-4">
       <section className="mx-auto w-full max-w-md border border-stone-500 bg-[#efefef] shadow-[3px_3px_0_0_rgba(120,130,150,0.25)]">
@@ -15,6 +24,14 @@ export default function Home() {
         </div>
 
         <div className="space-y-4 p-4 sm:p-5">
+          <div className="border border-stone-400 bg-[#fffbe6] px-3 py-2 text-[11px] leading-5 text-stone-700">
+            <p className="font-bold text-stone-900">DEPLOY STATUS</p>
+            <p>최종 빌드: {buildTimestamp}</p>
+            <p>
+              배포 코드: {deploymentCode} / 환경: {deploymentEnv}
+            </p>
+          </div>
+
           <div className="border border-stone-400 bg-[#f7f7f7] px-3 py-2 text-[11px] font-bold tracking-[0.18em] text-blue-800">
             ::: 사내 관계 분석 시스템 :::
           </div>
@@ -51,8 +68,7 @@ export default function Home() {
           </div>
           <div className="border border-stone-400 bg-[#fffdf7] px-3 py-2 text-xs leading-5 text-stone-700">
             <p className="font-bold text-stone-900">NOTICE</p>
-            <p>결과는 본인만 확인 가능합니다.</p>
-            <p>주의: 결과를 보고 퇴사 충동이 들 수 있습니다.</p>
+            <p>주의: 결과를 믿든 안 믿든 책임지지 않습니다.</p>
           </div>
         </div>
       </section>
