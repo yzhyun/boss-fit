@@ -39,7 +39,8 @@ export default function Home() {
           <div className="border border-stone-400 bg-white p-3 text-sm leading-6 text-stone-700">
             <p>상사의 MBTI와</p>
             <p>당신의 업무 반응 패턴을 기반으로</p>
-            <p>최첨단 궁합을 분석합니다.</p>
+            <p>복잡한 알고리즘을 통해</p>
+            <p>궁합을 대충 분석합니다.</p>
           </div>
 
           <div className="grid grid-cols-3 gap-2 text-[11px] font-bold text-stone-700">
