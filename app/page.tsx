@@ -1,22 +1,27 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[linear-gradient(180deg,#fff8ef_0%,#ffe8d8_48%,#ffe0e6_100%)] px-6 py-10 text-stone-800">
-      <div className="mx-auto flex min-h-[calc(100vh-5rem)] max-w-6xl flex-col justify-center">
-        <section className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+    <main className="min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top,#fffaf0_0%,#ffe9d7_42%,#ffdbe6_100%)] px-6 py-10 text-stone-800">
+      <div className="mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl flex-col justify-center">
+        <section className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div className="space-y-8">
-            <div className="inline-flex items-center rounded-full border border-rose-200 bg-white/80 px-4 py-2 text-sm font-semibold text-rose-500 shadow-sm backdrop-blur">
+            <div className="inline-flex items-center rounded-full border border-rose-200 bg-white/85 px-4 py-2 text-sm font-semibold text-rose-500 shadow-sm backdrop-blur">
               Boss Fit
             </div>
 
             <div className="space-y-5">
-              <h1 className="max-w-2xl text-4xl font-black tracking-tight text-stone-900 sm:text-5xl lg:text-6xl">
+              <h1 className="max-w-2xl text-4xl font-black tracking-tight text-stone-900 sm:text-5xl lg:text-7xl">
                 직장상사와 나,
                 <br />
-                얼마나 잘 맞을까?
+                얼마나 잘 맞는지
+                <br />
+                귀엽게 확인해보자
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-stone-600">
                 Boss Fit은 직장상사, 동료, 오피스 관계를 가볍고 귀엽게
-                풀어보는 궁합 테스트 서비스입니다.
+                풀어보는 궁합 테스트 서비스입니다. 첫 인상부터 부담 없이,
+                하지만 기억에 남게.
               </p>
               <p className="inline-flex rounded-2xl bg-stone-900 px-4 py-3 text-sm font-semibold text-amber-100">
                 초기 뼈대 구성 중
@@ -37,73 +42,51 @@ export default function Home() {
                 </code>
               </div>
             </div>
+
+            <div className="grid max-w-xl gap-4 sm:grid-cols-3">
+              <div className="rounded-3xl border border-white/70 bg-white/70 p-4 shadow-sm backdrop-blur">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-rose-400">
+                  Mood
+                </p>
+                <p className="mt-2 text-2xl font-black text-stone-900">Cute</p>
+              </div>
+              <div className="rounded-3xl border border-white/70 bg-white/70 p-4 shadow-sm backdrop-blur">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-500">
+                  Match
+                </p>
+                <p className="mt-2 text-2xl font-black text-stone-900">92%</p>
+              </div>
+              <div className="rounded-3xl border border-white/70 bg-white/70 p-4 shadow-sm backdrop-blur">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-sky-500">
+                  Style
+                </p>
+                <p className="mt-2 text-2xl font-black text-stone-900">Office</p>
+              </div>
+            </div>
           </div>
 
           <div className="relative">
-            <div className="absolute inset-x-8 top-6 h-28 rounded-full bg-amber-300/50 blur-3xl" />
-            <div className="absolute inset-x-10 bottom-4 h-24 rounded-full bg-rose-300/50 blur-3xl" />
-            <div className="relative rounded-[2rem] border border-white/60 bg-white/70 p-6 shadow-[0_24px_80px_rgba(125,85,56,0.18)] backdrop-blur">
-              <div className="mb-4 flex items-center justify-between rounded-2xl bg-[#fff4ea] px-4 py-3">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.24em] text-orange-400">
-                    Office Match
-                  </p>
-                  <p className="mt-1 text-sm font-medium text-stone-500">
-                    boss compatibility preview
-                  </p>
-                </div>
-                <div className="rounded-full bg-white px-3 py-1 text-sm font-bold text-rose-500 shadow-sm">
-                  92%
-                </div>
+            <div className="absolute -top-4 left-8 h-28 w-28 rounded-full bg-amber-300/55 blur-3xl" />
+            <div className="absolute -right-2 top-24 h-32 w-32 rounded-full bg-rose-300/55 blur-3xl" />
+            <div className="absolute bottom-8 left-14 h-24 w-24 rounded-full bg-sky-200/60 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[2.5rem] border border-white/70 bg-white/72 p-4 shadow-[0_30px_100px_rgba(125,85,56,0.22)] backdrop-blur sm:p-6">
+              <div className="absolute left-5 top-5 rounded-full bg-stone-900 px-4 py-2 text-xs font-black uppercase tracking-[0.24em] text-white">
+                boss match mascot
               </div>
-
-              <div className="rounded-[1.75rem] bg-[linear-gradient(180deg,#fffdf8_0%,#fff1ef_100%)] p-4">
-                <svg
-                  viewBox="0 0 520 420"
-                  className="h-auto w-full"
-                  role="img"
-                  aria-label="Cute office compatibility illustration"
-                >
-                  <circle cx="118" cy="100" r="46" fill="#fecaca" />
-                  <circle cx="405" cy="96" r="52" fill="#fde68a" />
-                  <circle cx="428" cy="300" r="40" fill="#ddd6fe" />
-                  <rect x="76" y="170" width="368" height="164" rx="28" fill="#fff" />
-                  <rect x="96" y="190" width="328" height="110" rx="22" fill="#fef3c7" />
-                  <rect x="150" y="300" width="220" height="18" rx="9" fill="#fed7aa" />
-                  <rect x="170" y="318" width="24" height="52" rx="12" fill="#cbd5e1" />
-                  <rect x="326" y="318" width="24" height="52" rx="12" fill="#cbd5e1" />
-
-                  <g transform="translate(120 86)">
-                    <circle cx="62" cy="62" r="48" fill="#fcd7bf" />
-                    <path d="M26 52c6-30 64-42 86-8 4 7 6 14 6 23-14-10-27-14-38-12-21 3-35 11-52 24-9-8-10-18-2-27Z" fill="#7c4a33" />
-                    <circle cx="46" cy="70" r="4.5" fill="#3f2a1d" />
-                    <circle cx="78" cy="70" r="4.5" fill="#3f2a1d" />
-                    <path d="M49 89c10 10 20 10 30 0" stroke="#ef4444" strokeWidth="4.5" strokeLinecap="round" fill="none" />
-                    <rect x="26" y="112" width="72" height="78" rx="24" fill="#f87171" />
-                    <path d="M62 112l18 18H44l18-18Z" fill="#fff" />
-                    <rect x="12" y="132" width="20" height="58" rx="10" fill="#fcd7bf" />
-                    <rect x="92" y="132" width="20" height="58" rx="10" fill="#fcd7bf" />
-                  </g>
-
-                  <g transform="translate(258 74)">
-                    <circle cx="72" cy="66" r="50" fill="#f7d4b5" />
-                    <path d="M26 60c0-31 24-56 56-56 31 0 53 19 60 49-17-4-33-2-48 4-22 9-35 20-49 36-12-7-19-19-19-33Z" fill="#374151" />
-                    <circle cx="55" cy="75" r="4.5" fill="#1f2937" />
-                    <circle cx="88" cy="75" r="4.5" fill="#1f2937" />
-                    <path d="M58 92c8 9 18 9 26 0" stroke="#f43f5e" strokeWidth="4.5" strokeLinecap="round" fill="none" />
-                    <rect x="34" y="116" width="78" height="82" rx="24" fill="#60a5fa" />
-                    <path d="M72 116l18 18H54l18-18Z" fill="#fff" />
-                    <rect x="18" y="136" width="20" height="60" rx="10" fill="#f7d4b5" />
-                    <rect x="108" y="136" width="20" height="60" rx="10" fill="#f7d4b5" />
-                  </g>
-
-                  <g fill="#fb7185">
-                    <path d="M244 88c0-10 8-18 18-18 8 0 14 5 17 11 3-6 9-11 17-11 10 0 18 8 18 18 0 21-25 34-35 42-10-8-35-21-35-42Z" />
-                    <path d="M206 138c0-7 6-12 12-12 6 0 10 3 12 8 2-5 6-8 12-8 6 0 12 5 12 12 0 14-18 23-24 29-6-6-24-15-24-29Z" opacity="0.8" />
-                    <path d="M304 146c0-7 6-12 12-12 6 0 10 3 12 8 2-5 6-8 12-8 6 0 12 5 12 12 0 14-18 23-24 29-6-6-24-15-24-29Z" opacity="0.8" />
-                  </g>
-                </svg>
+              <div className="absolute right-5 top-5 rounded-full bg-white/95 px-4 py-2 text-sm font-black text-rose-500 shadow">
+                launch face
               </div>
+              <div className="relative rounded-[2rem] bg-[linear-gradient(180deg,#fff7f0_0%,#fff4fb_100%)] p-3">
+                <Image
+                  src="/boss-fit-mascot.png"
+                  alt="Boss Fit mascot character"
+                  width={1024}
+                  height={1536}
+                  priority
+                  className="h-auto w-full rounded-[1.6rem] object-cover"
+                />
+              </div>
+              <div className="pointer-events-none absolute -bottom-6 left-1/2 h-16 w-3/4 -translate-x-1/2 rounded-full bg-rose-200/60 blur-2xl" />
             </div>
           </div>
         </section>
