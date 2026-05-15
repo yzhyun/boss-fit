@@ -3,6 +3,18 @@
 Boss Fit is a Next.js App Router starter for a Vercel-deployable workplace compatibility service.  
 This stage only provides the application skeleton and a Neon PostgreSQL connection health check.
 
+## Current Screens
+
+- `/`: test start screen
+- `/test`: temporary question entry screen
+
+Current input scope:
+
+- boss MBTI: required
+- no blood type input
+- no age group input
+- no gender input
+
 ## Local Development
 
 Install dependencies:
