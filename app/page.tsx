@@ -37,12 +37,11 @@ export default function Home() {
           </div>
 
           <div className="border border-stone-400 bg-white p-3 text-sm leading-6 text-stone-700">
-            <p className="font-bold text-stone-800">
-              상사의 MBTI 기반 회사 생존 테스트
-            </p>
-            <p>혼난 뒤 조용히 우는 유형인지 분석합니다</p>
-            <p>직장인들의 눈물 데이터를 기반으로 분석합니다</p>
-            <p>팀장님과의 업무 온도차를 계산합니다</p>
+            <p>상사의 MBTI와</p>
+            <p>당신의 업무 반응 패턴을 기반으로</p>
+            <p>회사 궁합도를 분석합니다.</p>
+            <p>업무 온도차 및 생존 가능성을 계산합니다.</p>
+            <p>직장인 공감 데이터를 기반으로 결과를 제공합니다.</p>
           </div>
 
           <div className="grid grid-cols-3 gap-2 text-[11px] font-bold text-stone-700">
@@ -70,16 +69,18 @@ export default function Home() {
               <span>80%</span>
             </div>
             <p className="mt-2 text-sm font-bold text-blue-800">
-              사내 데이터 동기화 중...
+              사내 관계 데이터 불러오는 중..
             </p>
             <div className="mt-3 border border-stone-500 bg-white p-1">
               <div className="h-3 w-4/5 bg-[#1b458f]" />
             </div>
             <div className="mt-3 space-y-1 text-[12px] text-stone-600">
-              <p>&gt; 퇴사 위험도 계산 중...</p>
               <p>&gt; 팀장 성향 매칭 중...</p>
-              <p>&gt; 감정형 팀원 보호 모드 활성화..</p>
-              <p>&gt; 야근 내성 수치 확인 중...</p>
+              <p>&gt; 업무 온도차 계산 중...</p>
+              <p>&gt; 야근 내성 수치 분석 중...</p>
+              <p>&gt; 팀 분위기 적응력 확인 중...</p>
+              <p>&gt; 직장 생존 확률 계산 중...</p>
+              <p>&gt; 보고 체계 호환성 분석 중...</p>
             </div>
           </div>
 
