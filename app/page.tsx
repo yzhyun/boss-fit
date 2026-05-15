@@ -32,16 +32,14 @@ export default function Home() {
             <h1 className="pt-2 text-[30px] leading-9 font-black tracking-[-0.04em] text-stone-900">
               팀장님...
               <br />
-              전 밤티 팀원인가요?
+              전 밤티인가요?
             </h1>
           </div>
 
           <div className="border border-stone-400 bg-white p-3 text-sm leading-6 text-stone-700">
             <p>상사의 MBTI와</p>
             <p>당신의 업무 반응 패턴을 기반으로</p>
-            <p>회사 궁합도를 분석합니다.</p>
-            <p>업무 온도차 및 생존 가능성을 계산합니다.</p>
-            <p>직장인 공감 데이터를 기반으로 결과를 제공합니다.</p>
+            <p>최첨단 궁합을 분석합니다.</p>
           </div>
 
           <div className="grid grid-cols-3 gap-2 text-[11px] font-bold text-stone-700">
@@ -57,33 +55,8 @@ export default function Home() {
           </div>
 
           <div className="border border-stone-400 bg-[#f9fbff] p-3">
-            <div className="mb-3 border border-dashed border-stone-400 bg-[#eef4ff] px-2 py-1 text-[11px] font-bold tracking-[0.14em] text-blue-800">
-              회사 밈 기반 진단 모듈 로드 완료
-            </div>
             <StartForm />
           </div>
-
-          <div className="border border-stone-400 bg-[#f6f6f6] p-3">
-            <div className="flex items-center justify-between text-xs font-bold text-stone-700">
-              <span>상태창</span>
-              <span>80%</span>
-            </div>
-            <p className="mt-2 text-sm font-bold text-blue-800">
-              사내 관계 데이터 불러오는 중..
-            </p>
-            <div className="mt-3 border border-stone-500 bg-white p-1">
-              <div className="h-3 w-4/5 bg-[#1b458f]" />
-            </div>
-            <div className="mt-3 space-y-1 text-[12px] text-stone-600">
-              <p>&gt; 팀장 성향 매칭 중...</p>
-              <p>&gt; 업무 온도차 계산 중...</p>
-              <p>&gt; 야근 내성 수치 분석 중...</p>
-              <p>&gt; 팀 분위기 적응력 확인 중...</p>
-              <p>&gt; 직장 생존 확률 계산 중...</p>
-              <p>&gt; 보고 체계 호환성 분석 중...</p>
-            </div>
-          </div>
-
           <div className="border border-stone-400 bg-[#fffdf7] px-3 py-2 text-xs leading-5 text-stone-700">
             <p className="font-bold text-stone-900">NOTICE</p>
             <p>결과는 본인만 확인 가능합니다.</p>
