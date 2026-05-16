@@ -7,6 +7,7 @@ import { MBTI_TYPES, type MbtiType } from "@/lib/constants";
 export function StartForm() {
   const router = useRouter();
   const [bossMbti, setBossMbti] = useState<MbtiType | "">("");
+  const isDisabled = bossMbti === "";
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -21,31 +22,40 @@ export function StartForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="space-y-2">
-        <p className="text-[11px] font-bold tracking-[0.18em] text-blue-800">
-          INPUT 상사 MBTI
-        </p>
+        <label
+          htmlFor="boss-mbti"
+          className="block text-sm font-semibold text-slate-700"
+        >
+          상사 MBTI
+        </label>
         <select
           id="boss-mbti"
           name="bossMbti"
           value={bossMbti}
           onChange={(event) => setBossMbti(event.target.value as MbtiType | "")}
-          className="h-13 w-full border border-stone-500 bg-[#fcfcfc] px-3 text-[15px] font-bold text-stone-900 outline-none transition focus:border-blue-800"
+          className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-[15px] font-semibold text-slate-900 outline-none transition focus:border-sky-500 focus:bg-white"
           aria-describedby="boss-mbti-help"
         >
-          <option value="">MBTI 유형 선택</option>
+          <option value="">상사 MBTI를 선택해주세요</option>
           {MBTI_TYPES.map((type) => (
             <option key={type} value={type}>
               {type}
             </option>
           ))}
         </select>
+        <p id="boss-mbti-help" className="text-sm text-slate-500">
+          {isDisabled
+            ? "상사 MBTI를 선택해주세요."
+            : `${bossMbti} 유형 상사 기준으로 테스트를 시작합니다.`}
+        </p>
       </div>
 
       <button
         type="submit"
-        className="flex h-13 w-full items-center justify-center border border-blue-950 bg-blue-800 text-base font-black tracking-[0.04em] text-white transition hover:bg-blue-700"
+        disabled={isDisabled}
+        className="flex h-14 w-full items-center justify-center rounded-2xl bg-sky-600 text-base font-bold text-white transition hover:bg-sky-500 disabled:cursor-not-allowed disabled:bg-slate-300"
       >
-        생존 테스트 시작
+        테스트 시작하기
       </button>
     </form>
   );

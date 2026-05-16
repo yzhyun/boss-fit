@@ -8,6 +8,8 @@ This stage only provides the application skeleton and a Neon PostgreSQL connecti
 - `/`: test start screen
 - `/test`: temporary question entry screen
 
+The home screen is not a separate landing page. It is the test start screen and includes a Bamti-style office worker mascot.
+
 Current input scope:
 
 - boss MBTI: required

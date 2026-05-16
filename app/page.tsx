@@ -1,75 +1,43 @@
+import Image from "next/image";
 import { StartForm } from "@/app/_components/start-form";
 
 export default function Home() {
-  const buildTimestamp = new Intl.DateTimeFormat("ko-KR", {
-    dateStyle: "short",
-    timeStyle: "medium",
-    timeZone: "Asia/Seoul",
-  }).format(new Date());
-
-  const deploymentCode = process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7) ?? "local";
-  const deploymentEnv = process.env.VERCEL_ENV ?? "local";
-
   return (
-    <main className="min-h-screen bg-[#d8dde6] px-3 py-4 text-stone-900 sm:px-4">
-      <section className="mx-auto w-full max-w-md border border-stone-500 bg-[#efefef] shadow-[3px_3px_0_0_rgba(120,130,150,0.25)]">
-        <div className="flex items-center justify-between border-b border-blue-950 bg-[#1b458f] px-3 py-2 text-white">
-          <p className="text-sm font-black tracking-[0.04em]">
-            사내 관계 분석 시스템 v2.1
-          </p>
-          <div className="flex gap-1.5">
-            <span className="h-3 w-3 border border-blue-950 bg-[#d6def3]" />
-            <span className="h-3 w-3 border border-blue-950 bg-[#d6def3]" />
+    <main className="flex min-h-screen items-center justify-center bg-[linear-gradient(180deg,#f6faff_0%,#eef4ff_100%)] px-4 py-8 text-slate-900">
+      <section className="w-full max-w-md rounded-[28px] border border-slate-200 bg-white px-6 py-8 text-center shadow-[0_20px_50px_rgba(148,163,184,0.18)] sm:px-8">
+        <div className="space-y-5">
+          <div className="flex justify-center">
+            <Image
+              src="/images/bamti-placeholder.svg"
+              alt="밤티 회사원 마스코트"
+              width={128}
+              height={128}
+              priority
+              className="h-28 w-28 sm:h-36 sm:w-36"
+            />
           </div>
-        </div>
 
-        <div className="space-y-4 p-4 sm:p-5">
-          <div className="border border-stone-400 bg-[#fffbe6] px-3 py-2 text-[11px] leading-5 text-stone-700">
-            <p className="font-bold text-stone-900">DEPLOY STATUS</p>
-            <p>최종 빌드: {buildTimestamp}</p>
-            <p>
-              배포 코드: {deploymentCode} / 환경: {deploymentEnv}
+          <div className="space-y-3">
+            <p className="text-sm font-bold uppercase tracking-[0.28em] text-sky-600">
+              Boss Fit
+            </p>
+            <h1 className="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
+              팀장님 전 밤티인가요?
+            </h1>
+            <p className="text-base leading-7 text-slate-600">
+              상사의 MBTI와 내 선택으로
+              <br />
+              회사 궁합도를 확인해보세요.
             </p>
           </div>
 
-          <div className="border border-stone-400 bg-[#f7f7f7] px-3 py-2 text-[11px] font-bold tracking-[0.18em] text-blue-800">
-            ::: 사내 관계 분석 시스템 :::
-          </div>
-
-          <div className="space-y-1">
-            <h1 className="pt-2 text-[30px] leading-9 font-black tracking-[-0.04em] text-stone-900">
-              팀장님...
-              <br />
-              전 밤티인가요?
-            </h1>
-          </div>
-
-          <div className="border border-stone-400 bg-white p-3 text-sm leading-6 text-stone-700">
-            <p>상사의 MBTI와</p>
-            <p>당신의 업무 반응 패턴을 기반으로</p>
-            <p>복잡한 알고리즘을 통해</p>
-            <p>궁합을 대충 분석합니다.</p>
-          </div>
-
-          <div className="grid grid-cols-3 gap-2 text-[11px] font-bold text-stone-700">
-            <div className="border border-stone-400 bg-[#fbfbfb] px-2 py-2">
-              총 10문항
-            </div>
-            <div className="border border-stone-400 bg-[#fbfbfb] px-2 py-2">
-              약 3분
-            </div>
-            <div className="border border-stone-400 bg-[#fbfbfb] px-2 py-2">
-              몰래 가능
-            </div>
-          </div>
-
-          <div className="border border-stone-400 bg-[#f9fbff] p-3">
+          <div className="rounded-[24px] border border-slate-200 bg-slate-50 p-4 text-left">
             <StartForm />
           </div>
-          <div className="border border-stone-400 bg-[#fffdf7] px-3 py-2 text-xs leading-5 text-stone-700">
-            <p className="font-bold text-stone-900">NOTICE</p>
-            <p>주의: 결과를 믿든 안 믿든 책임지지 않습니다.</p>
-          </div>
+
+          <p className="text-sm text-slate-500">
+            재미로 보는 직장 관계 테스트입니다.
+          </p>
         </div>
       </section>
     </main>
