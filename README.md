@@ -1,33 +1,26 @@
 # Boss Fit
 
-Boss Fit is a Next.js App Router starter for a Vercel-deployable workplace compatibility service.  
-This stage only provides the application skeleton and a Neon PostgreSQL connection health check.
+Boss Fit currently runs a single MVP test: `상사핏 테스트`.
 
-## Current Screens
+## What It Does
 
 - `/`: test start screen
-- `/test`: temporary question entry screen
+- `/test`: one-question-at-a-time test flow
+- `/result/[sessionKey]`: score and result screen
+
+Input scope for the MVP:
+
+- boss MBTI: required
+- user gender: male / female / unspecified
+- no blood type input
+- no age group input
 
 The home screen is not a separate landing page. It is the test start screen and includes a Bamti-style office worker mascot.
 
-Current input scope:
-
-- boss MBTI: required
-- no blood type input
-- no age group input
-- no gender input
-
 ## Local Development
-
-Install dependencies:
 
 ```bash
 npm install
-```
-
-Start the development server:
-
-```bash
 npm run dev
 ```
 
@@ -35,13 +28,33 @@ Open `http://localhost:3000` in your browser.
 
 ## Environment Variables
 
-Create or update `.env.local` in the project root and set:
+Create or update `.env.local` in the project root:
 
 ```bash
 DATABASE_URL=postgresql://USER:PASSWORD@HOST/neondb?sslmode=require&channel_binding=require
 ```
 
-`DATABASE_URL` is required for the Neon database connection check.
+`DATABASE_URL` is required for the Neon database connection and APIs.
+
+## Database Setup
+
+Apply schema:
+
+```bash
+psql "$DATABASE_URL" -f sql/schema.sql
+```
+
+Apply seed data:
+
+```bash
+psql "$DATABASE_URL" -f sql/seed.sql
+```
+
+## API
+
+- `GET /api/questions`
+- `POST /api/sessions`
+- `GET /api/results/:sessionKey`
 
 ## Database Health Check
 

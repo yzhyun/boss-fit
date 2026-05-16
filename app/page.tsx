@@ -19,15 +19,15 @@ export default function Home() {
 
           <div className="space-y-3">
             <p className="text-sm font-bold uppercase tracking-[0.28em] text-sky-600">
-              Boss Fit
+              상사핏 테스트
             </p>
             <h1 className="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
               팀장님 전 밤티인가요?
             </h1>
             <p className="text-base leading-7 text-slate-600">
-              상사의 MBTI와 내 선택으로
+              팀장님의 MBTI와 내 회사생활 선택으로 보는
               <br />
-              회사 궁합도를 확인해보세요.
+              장난 반, 공감 반 업무 궁합 테스트
             </p>
           </div>
 
