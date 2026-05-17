@@ -7,14 +7,19 @@ export default function Home() {
       <section className="w-full max-w-md rounded-[28px] border border-slate-200 bg-white px-6 py-8 text-center shadow-[0_20px_50px_rgba(148,163,184,0.18)] sm:px-8">
         <div className="space-y-5">
           <div className="flex justify-center">
-            <Image
-              src="/images/bamti-placeholder.svg"
-              alt="밤티 회사원 마스코트"
-              width={128}
-              height={128}
-              priority
-              className="h-28 w-28 sm:h-36 sm:w-36"
-            />
+            <div className="relative rounded-[32px] bg-[radial-gradient(circle_at_30%_20%,#e0f2fe_0%,#f8fafc_48%,#fef3c7_100%)] p-3 shadow-[0_18px_45px_rgba(14,165,233,0.18)] ring-1 ring-sky-100">
+              <div className="absolute -right-2 -top-2 rounded-full bg-amber-300 px-3 py-1 text-xs font-black text-amber-950 shadow-sm">
+                NEW
+              </div>
+              <Image
+                src="/images/bamti-placeholder.svg"
+                alt="커피와 노트북을 든 밤티 회사원 마스코트"
+                width={192}
+                height={192}
+                priority
+                className="h-36 w-36 sm:h-44 sm:w-44"
+              />
+            </div>
           </div>
 
           <div className="space-y-3">
