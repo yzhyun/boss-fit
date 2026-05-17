@@ -24,8 +24,8 @@ export function StartForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
-      <div className="space-y-2">
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="space-y-1.5">
         <label
           htmlFor="boss-mbti"
           className="block text-sm font-semibold text-slate-700"
@@ -47,14 +47,14 @@ export function StartForm() {
             </option>
           ))}
         </select>
-        <p id="boss-mbti-help" className="text-sm text-slate-500">
+        <p id="boss-mbti-help" className="text-xs leading-5 text-slate-500">
           {isDisabled
             ? "상사 MBTI를 선택해주세요."
-            : `${bossMbti} 유형 상사 기준으로 상사핏 테스트를 시작합니다.`}
+            : `${bossMbti} 상사 기준으로 테스트를 시작합니다.`}
         </p>
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-1.5">
         <p className="text-sm font-semibold text-slate-700">내 성별</p>
         <div className="grid grid-cols-3 gap-2">
           {GENDER_OPTIONS.map((option) => {
@@ -81,7 +81,7 @@ export function StartForm() {
       <button
         type="submit"
         disabled={isDisabled}
-        className="flex h-14 w-full items-center justify-center rounded-2xl bg-sky-600 text-base font-bold text-white transition hover:bg-sky-500 disabled:cursor-not-allowed disabled:bg-slate-300"
+        className="flex h-12 w-full items-center justify-center rounded-2xl bg-sky-600 text-[15px] font-bold text-white transition hover:bg-sky-500 disabled:cursor-not-allowed disabled:bg-slate-300"
       >
         상사핏 테스트 시작하기
       </button>
