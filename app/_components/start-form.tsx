@@ -28,7 +28,7 @@ export function StartForm() {
       <div className="space-y-2">
         <label
           htmlFor="boss-mbti"
-          className="block text-sm font-semibold text-slate-700"
+          className="block text-sm font-black tracking-[0.08em] text-[#473729]"
         >
           상사 MBTI
         </label>
@@ -37,7 +37,7 @@ export function StartForm() {
           name="bossMbti"
           value={bossMbti}
           onChange={(event) => setBossMbti(event.target.value as MbtiType | "")}
-          className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-[15px] font-semibold text-slate-900 outline-none transition focus:border-sky-500 focus:bg-white"
+          className="h-14 w-full rounded-[18px] border border-[#bdae90] bg-[#fffaf0] px-4 text-[15px] font-semibold text-[#2c251f] outline-none transition focus:border-[#1f314f] focus:bg-white"
           aria-describedby="boss-mbti-help"
         >
           <option value="">상사 MBTI를 선택해주세요</option>
@@ -47,7 +47,7 @@ export function StartForm() {
             </option>
           ))}
         </select>
-        <p id="boss-mbti-help" className="text-sm text-slate-500">
+        <p id="boss-mbti-help" className="text-sm text-[#7e6f5b]">
           {isDisabled
             ? "상사 MBTI를 선택해주세요."
             : `${bossMbti} 유형 상사 기준으로 상사핏 테스트를 시작합니다.`}
@@ -55,7 +55,7 @@ export function StartForm() {
       </div>
 
       <div className="space-y-2">
-        <p className="text-sm font-semibold text-slate-700">내 성별</p>
+        <p className="text-sm font-black tracking-[0.08em] text-[#473729]">내 성별</p>
         <div className="grid grid-cols-3 gap-2">
           {GENDER_OPTIONS.map((option) => {
             const isSelected = userGender === option.value;
@@ -65,10 +65,10 @@ export function StartForm() {
                 key={option.value}
                 type="button"
                 onClick={() => setUserGender(option.value)}
-                className={`h-12 rounded-2xl border text-sm font-semibold transition ${
+                className={`h-12 rounded-[16px] border text-sm font-bold transition ${
                   isSelected
-                    ? "border-sky-600 bg-sky-50 text-sky-700"
-                    : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
+                    ? "border-[#b6372e] bg-[#fbebe8] text-[#9f2c24]"
+                    : "border-[#c6b89c] bg-[#fffaf0] text-[#6a5c49] hover:bg-[#f8f1e3]"
                 }`}
               >
                 {option.label}
@@ -81,9 +81,9 @@ export function StartForm() {
       <button
         type="submit"
         disabled={isDisabled}
-        className="flex h-14 w-full items-center justify-center rounded-2xl bg-sky-600 text-base font-bold text-white transition hover:bg-sky-500 disabled:cursor-not-allowed disabled:bg-slate-300"
+        className="flex h-14 w-full items-center justify-center rounded-[18px] border border-[#14243e] bg-[#1b2c49] text-base font-black text-white transition hover:bg-[#16243c] disabled:cursor-not-allowed disabled:border-[#9e988d] disabled:bg-[#a9a298]"
       >
-        상사핏 테스트 시작하기
+        궁합 분석 시작하기
       </button>
     </form>
   );
